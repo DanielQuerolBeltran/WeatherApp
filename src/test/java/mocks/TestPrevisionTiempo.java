@@ -49,8 +49,10 @@ public class TestPrevisionTiempo {
 
         Prevision previsionJSON = cargarPrevision(getJsonObject("src/test/java/mocks/PrevisionBarcelona.json"));
 
-        when(panelCliente.getPrevision(barcelona)).thenReturn(previsionJSON);
+        OpenWeather servidorMock = Mockito.mock(OpenWeather.class);
+        panelCliente.setServidorPorDefecto(servidorMock);
 
+        when(panelCliente.getPrevision(barcelona)).thenReturn(previsionJSON);
 
         Prevision prevision = panelCliente.getPrevision(barcelona);
 

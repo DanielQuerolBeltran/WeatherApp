@@ -37,7 +37,6 @@ public class TestCargarEstado {
         estadoTiempo.setTemperatura(15.0);
         estadoTiempo.setPresion(1000.0);
         madrid.setTiempoActual(estadoTiempo);
-
     }
 
     //E1 Valido. El usuario es capaz de recuperar los datos almacenados y ver la información.

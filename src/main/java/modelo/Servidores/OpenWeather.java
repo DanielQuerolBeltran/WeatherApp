@@ -108,7 +108,6 @@ public class OpenWeather  implements IServidor{
         String url = "http://api.openweathermap.org/data/2.5/weather?q="+nombrelocalizacionURL+"&APPID="+KEY;
         JSONObject jsonObject = peticion.doHttpGet(url);
 
-        System.out.println(jsonObject);
         String codRespuesta = jsonObject.get("cod").toString();
         if(codRespuesta.equals("200")){ //Comprobamos que la respuesta haya sido correcta. (200 = se ha encontrado algo)
             Localizacion localizacion = jsonToLocalizacion(jsonObject);
@@ -177,6 +176,8 @@ public class OpenWeather  implements IServidor{
 
         String url = "http://api.openweathermap.org/data/2.5/weather?zip="+cp+",es&APPID="+KEY;
         JSONObject jsonObject = peticion.doHttpGet(url);
+
+        System.out.println(jsonObject);
         List<Localizacion> localizaciones = new ArrayList<>();
         String codRespuesta = jsonObject.get("cod").toString();
 

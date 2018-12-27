@@ -1,10 +1,9 @@
 package mocks;
 
-import modelo.Excepciones.EstadoTiempoException;
 import modelo.Localizacion.Localizacion;
 import modelo.PanelCliente;
+import modelo.Servidores.IServidor;
 import modelo.Servidores.OpenWeather;
-import modelo.Tiempo.EstadoTiempo;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
@@ -15,7 +14,6 @@ import org.mockito.Mockito;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 import static org.junit.Assert.assertEquals;
@@ -25,15 +23,18 @@ import static org.mockito.Mockito.when;
 /**
  * Created by iskynet on 27/12/2018.
  */
-public class TestBuscarCiudadNombre {
+public class TestBuscarCiudadCP {
+
     PanelCliente panelCliente = null;
+    List<Localizacion> resultadoBusqueda = null;
 
     @Before
     public void init(){
         panelCliente = PanelCliente.getInstance();
+        panelCliente.setServidorPorDefecto(new OpenWeather());
     }
 
-    //E1 Valido. El usuario introduce una ciudad y el sistema la tiene disponible.
+    //E1 valido. El usuario introduce un CP correcto y elservidor
     @Test
     public void ciudadBuscadaDisponible(){
 
@@ -47,9 +48,9 @@ public class TestBuscarCiudadNombre {
         OpenWeather servidorMock = Mockito.mock(OpenWeather.class);
         panelCliente.setServidorPorDefecto(servidorMock); //inyectamos el servidor falso
 
-        when(panelCliente.buscarCiudadNombre("Castellón de la Plana")).thenReturn(listaResultado);
+        when(panelCliente.buscarCiudadCP("12005")).thenReturn(listaResultado);
 
-        listaResultado = panelCliente.buscarCiudadNombre("Castellón de la Plana");
+        listaResultado = panelCliente.buscarCiudadCP("12005");
 
         assertEquals(listaResultado.size(), 1 );
         assertEquals(listaResultado.get(0).getNombre(), "Castellón de la Plana" );
@@ -87,4 +88,3 @@ public class TestBuscarCiudadNombre {
         return localizacion;
     }
 }
-
