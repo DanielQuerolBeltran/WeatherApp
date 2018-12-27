@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="panel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="250.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml">
+   <children>
+      <Label fx:id="nombre" layoutX="9.0" layoutY="3.0" text="Nombre, País" textAlignment="JUSTIFY" textFill="#1e2e97">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="info" layoutX="11.0" layoutY="26.0" text="Info" textAlignment="JUSTIFY" textFill="#515151">
+         <font>
+            <Font size="12.0" />
+         </font></Label>
+   </children>
+</Pane>

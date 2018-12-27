@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="panel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="157.0" prefWidth="79.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml">
+   <children>
+      <Label fx:id="labelFecha" layoutX="15.0" layoutY="3.0" text="Fecha">
+         <font>
+            <Font size="17.0" />
+         </font></Label>
+      <Label fx:id="labelTemperatura" alignment="CENTER" contentDisplay="CENTER" layoutX="22.0" layoutY="35.0" text="0" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" wrapText="true">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label fx:id="labelPresion" alignment="CENTER" contentDisplay="CENTER" layoutX="13.0" layoutY="60.0" text="0" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" wrapText="true">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelViento" alignment="CENTER" contentDisplay="CENTER" layoutX="22.0" layoutY="84.0" text="0" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" wrapText="true">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelNuvosidad" alignment="CENTER" contentDisplay="CENTER" layoutX="22.0" layoutY="108.0" text="0" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" wrapText="true">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

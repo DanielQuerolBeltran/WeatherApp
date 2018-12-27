@@ -1,0 +1,39 @@
+{
+    "dt": 1545815646,
+    "coord": {
+        "lon": 39.99,
+        "lat": -0.06
+    },
+    "weather": [{
+        "icon": "01d",
+        "description": "clear sky",
+        "main": "Clear",
+        "id": 800
+    }],
+    "name": "Garissa",
+    "cod": 200,
+    "main": {
+        "temp": 307.937,
+        "temp_min": 307.937,
+        "grnd_level": 1007.45,
+        "humidity": 41,
+        "pressure": 1007.45,
+        "sea_level": 1025.16,
+        "temp_max": 307.937
+    },
+    "clouds": {
+        "all": 0
+    },
+    "id": 197745,
+    "sys": {
+        "country": "KE",
+        "sunrise": 1545794211,
+        "sunset": 1545837874,
+        "message": 0.0056
+    },
+    "base": "stations",
+    "wind": {
+        "deg": 78.0012,
+        "speed": 4.46
+    }
+}

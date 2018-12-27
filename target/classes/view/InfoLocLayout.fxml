@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="500.0" maxWidth="600.0" minHeight="500.0" minWidth="600.0" prefHeight="500.0" prefWidth="600.0" style="-fx-background-image: url(&quot;1.jpg&quot;); -fx-background-position: left top; -fx-background-size: cover, auto;" stylesheets="@StyleMain.css" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="view.InfoLocLayoutControler">
+   <children>
+      <Pane fx:id="panelPrevisiones" layoutX="200.0" layoutY="193.0" prefHeight="212.0" prefWidth="600.0" styleClass="list-viewPrevision" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <ListView fx:id="listPrevisiones" layoutX="61.0" layoutY="10.0" orientation="HORIZONTAL" prefHeight="202.0" prefWidth="539.0" styleClass="list-viewPrevision" />
+            <Label layoutX="7.0" layoutY="96.0" text="Presion:" textAlignment="CENTER">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label layoutX="6.0" layoutY="122.0" text="Viento:" textAlignment="CENTER">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label layoutX="7.0" layoutY="69.0" text="Temp:">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <Label layoutX="6.0" layoutY="146.0" text="Nuvosidad:">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Label fx:id="ciudad" layoutX="55.0" layoutY="44.0" text="Ciudad" textOverrun="LEADING_ELLIPSIS" wrapText="true" AnchorPane.leftAnchor="50.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="pais" layoutX="60.0" layoutY="78.0" text="País" textOverrun="LEADING_WORD_ELLIPSIS" wrapText="true" AnchorPane.leftAnchor="50.0" />
+      <Label fx:id="tempActual" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="367.0" layoutY="47.0" text="0" textAlignment="RIGHT" textOverrun="CENTER_ELLIPSIS">
+         <font>
+            <Font size="64.0" />
+         </font>
+      </Label>
+      <Label layoutX="342.0" layoutY="139.0" text="Humedad:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="357.0" layoutY="165.0" text="Presión:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="366.0" layoutY="191.0" text="Viento:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="335.0" layoutY="216.0" text="Nuvosidad:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="humedad" layoutX="437.0" layoutY="139.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="presion" layoutX="437.0" layoutY="165.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="viento" layoutX="437.0" layoutY="191.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="nuvosidad" layoutX="437.0" layoutY="216.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="descripcion" layoutX="425.0" layoutY="115.0" />
+      <Label fx:id="labelPrevision" layoutX="20.0" layoutY="264.0" text="Previsión" textFill="#403a3a" AnchorPane.bottomAnchor="215.0" AnchorPane.leftAnchor="25.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imgFavorita" fitHeight="30.0" fitWidth="30.0" layoutX="402.0" layoutY="-28.0" onMouseClicked="#presFavorite" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+      <Button fx:id="unidades" layoutX="500.0" layoutY="87.0" mnemonicParsing="false" onAction="#presUnidades" text="Cº" textFill="#2b0fc9">
+         <font>
+            <Font size="19.0" />
+         </font>
+         <padding>
+            <Insets bottom="2.0" left="6.0" right="6.0" top="2.0" />
+         </padding>
+      </Button>
+      <Button fx:id="botonGuardar" layoutX="532.0" layoutY="255.0" mnemonicParsing="false" onAction="#guardarTiempoActual" text="Guardar">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+      <ProgressIndicator fx:id="loader" layoutX="14.0" layoutY="17.0" prefHeight="30.0" prefWidth="30.0" />
+
+   </children>
+</AnchorPane>
