@@ -14,7 +14,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 
 
-//Iteracion 1
+//Iteracion 2
 //Este test consiste en buscar guardar una prediccion, recuperarla y leer sus datos
 public class TestIteracion2 {
 
