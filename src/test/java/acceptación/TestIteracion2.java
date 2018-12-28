@@ -1,19 +1,14 @@
 package acceptación;
 
-import modelo.Excepciones.EstadoTiempoException;
 import modelo.Localizacion.Localizacion;
-import modelo.PanelCliente;
 import modelo.Persistencia.IPersistencia;
 import modelo.Persistencia.PersistenciaJSON;
-import modelo.Servidores.IServidor;
-import modelo.Servidores.OpenWeather;
 import modelo.Tiempo.EstadoTiempo;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.io.IOException;
 import java.util.Date;
-import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
