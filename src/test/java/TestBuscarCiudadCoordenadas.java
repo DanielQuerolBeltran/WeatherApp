@@ -28,7 +28,8 @@ public class TestBuscarCiudadCoordenadas {
     //E1 Valido. El usuario introduce unas coordenadas validas y que cooresponden a una ciudad.
     @Test
     public void ciudadBuscadaDisponible(){
-        resultadoBusqueda = server.buscarPorCoordenadas("-0.0576","39.9929");
+        resultadoBusqueda = server.buscarPorCoordenadas("39.9929", "-0.0576");
+        System.out.print(resultadoBusqueda.get(0).getNombre());
         assertFalse(resultadoBusqueda.size()==0 );
     }
 
@@ -36,7 +37,7 @@ public class TestBuscarCiudadCoordenadas {
     //E2 Invalido. El usuario introduce unas coordenadas invalidas.
     @Test(expected = IllegalArgumentException.class)
     public void ciudadBuscadaNoDisponible(){
-        resultadoBusqueda = server.buscarPorCoordenadas("-0.0576800","910.03568"); //Las longityudes y latitudes validas, Son validas entre -90º y 90º
+        resultadoBusqueda = server.buscarPorCoordenadas("-0.0576800","910.03568"); //Las longitudes y latitudes validas, Son validas entre -90º y 90º
         assertFalse(resultadoBusqueda.size()!=0 );
     }
 

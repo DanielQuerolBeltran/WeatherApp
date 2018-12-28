@@ -59,7 +59,7 @@ public class RootLayoutControler {
 
         inicializarBuscador();
         inicializarListaFavoritas();
-
+        nombreRadio.setSelected(true);
         nombreRadio.setToggleGroup(radioButtons);
         coordenadasRadio.setToggleGroup(radioButtons);
         cpRadio.setToggleGroup(radioButtons);
@@ -154,10 +154,13 @@ public class RootLayoutControler {
                 if(cpRadio == radioButtons.getSelectedToggle()){
                     listaResultado = panelCliente.buscarCiudadCP(cadenabusqueda);
                 }else{
-                    String[] coor = cadenabusqueda.split(" ");
-                    if(CoordenadasUtil.validarCoordenadas(coor[0]) && CoordenadasUtil.validarCoordenadas(coor[1])){
+
+                    String[] coor = cadenabusqueda.split(",");
+                    System.out.println(coor[0]+" "+coor[1]);
+                  //  if(CoordenadasUtil.validarCoordenadas(coor[0]) && CoordenadasUtil.validarCoordenadas(coor[1])){
                         listaResultado = panelCliente.buscarCiudadCoordenadas(coor[0], coor[1]);
-                    }
+                   // }
+
                 }
             }
 
